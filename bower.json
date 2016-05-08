@@ -21,6 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "skeleton": "^2.0.4"
+    "skeleton": "^2.0.4",
+    "tabletop": "^1.4.3"
   }
 }

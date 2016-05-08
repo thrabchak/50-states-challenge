@@ -1,0 +1,26 @@
+{
+  "name": "50-states-challenge",
+  "authors": [
+    "Tom Hrabchak <thrabchak@gmail.com>"
+  ],
+  "description": "Interactive map displaying progress on the completion of the 50 states marathon challenge.",
+  "main": "index.html",
+  "keywords": [
+    "geochart",
+    "marathon",
+    "running"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "^2.0.4"
+  }
+}

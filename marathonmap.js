@@ -69,17 +69,25 @@ var raceData = {};
 
 function parseRaceData(races) {
   // Iterate through each entry in races
-  for (var i = 0; i < race_log.elements.length; i++) {
-    //Lookup the race in races
+  for (var i = 0; i < races.elements.length; i++) {
+    var race = races.elements[i];
+    var raceid = race["RACEID"];
+    var state = race["State"];
+    var new_obj = {"State": state};
 
+    raceData[raceid] = new_obj;
   }
 }
 
 function parseStateData(race_log) {
   // Iterate through each entry in race_log
   for (var i = 0; i < race_log.elements.length; i++) {
-    //Lookup the race in raceData
+    var event = race_log.elements[i];
+    var raceid = event["RACEID"];
+    var raceObj = raceData[raceid];
+    var new_obj = {"RACEID": raceid};
 
+    stateData[raceObj.State].push(new_obj);
   }
 }
 

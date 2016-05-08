@@ -1,3 +1,4 @@
+// stateData
 data = {
   'AL': [
       {
@@ -6,7 +7,7 @@ data = {
           name: 'asf',
           city: 'safd',
           raceid: 'asdf',
-          
+
       },
       {}
   ],
@@ -26,6 +27,7 @@ data = {
   'IA': 'Iowa',
 }
 
+// chartData
 [
     ['State', 'Completed', 'Tooltip'],
     ['AK', 0],
@@ -43,3 +45,10 @@ data = {
     ['IN', 0],
     ['IA', 0],
 ]
+
+// race_data
+{
+    raceid: {},
+    raceid: {}
+}
+

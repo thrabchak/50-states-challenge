@@ -63,12 +63,23 @@ var state_names = {
 var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1HQEdDuUNbra9mGGUl390EaJlZ5wktay3XixThP09fQ8/pubhtml';
 var runner_name = "Sue Hrabchak";
 var stateData = {};
+var raceData = {};
 
 /* Retrieve data from Google Sheets */
 
-function parseStateData(race_log, races) {
-  for (var i = 0; i < us_states.length; i++) {
-    
+function parseRaceData(races) {
+  // Iterate through each entry in races
+  for (var i = 0; i < race_log.elements.length; i++) {
+    //Lookup the race in races
+
+  }
+}
+
+function parseStateData(race_log) {
+  // Iterate through each entry in race_log
+  for (var i = 0; i < race_log.elements.length; i++) {
+    //Lookup the race in raceData
+
   }
 }
 
@@ -91,7 +102,8 @@ function transformToChartData() {
 }
 
 function populateData(data) {
-  parseStateData(data.race_log, data.races);
+  parseRaceData(data.races);
+  parseStateData(data.race_log);
   transformToChartData();
   google.charts.load('current', {'packages': ['geochart']});
   google.charts.setOnLoadCallback(drawRegionsMap);
@@ -100,9 +112,7 @@ function populateData(data) {
 /* GeoChart Setup */
 
 function drawRegionsMap() {
-
   var data = google.visualization.arrayToDataTable(chartData);
-
   var options = {
     region: 'US',
     resolution: 'provinces',
